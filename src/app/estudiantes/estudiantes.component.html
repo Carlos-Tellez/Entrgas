@@ -1,0 +1,63 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col"><i class="fa-solid fa-id-card-clip"></i>  ID </th>
+            <th scope="col"><i class="fa-solid fa-camera-retro"></i>  Perfil </th>
+            <th scope="col"><i class="fa-solid fa-user"></i>  Nombre</th>
+            <th scope="col"> <i class="fa-solid fa-school"></i>  Curso </th>
+            <th scope="col"><i class="fa-solid fa-check fa-beat" style="color: #11b632;"></i>  Materias Aprobadas </th>
+            <th scope="col"><i class="fa-solid fa-ban fa-beat" style="color: #c00c0c;"></i>  Materias Reprobadas </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <img src="../assets/img/Profile (1).jpg">
+            <td> {{arrayEstudiante[0].nombre}} </td>
+            <td> {{arrayEstudiante[0].curso}} </td>
+            <td class="Apr"> {{arrayEstudiante[0].materiaApr}} Materias</td>
+            <td> {{arrayEstudiante[0].materiaRep}} Materias</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <img src="../assets/img/Profile (2).jpg">
+            <td> {{arrayEstudiante[1].nombre}} </td>
+            <td> {{arrayEstudiante[1].curso}} </td>
+            <td class="Apr"> {{arrayEstudiante[1].materiaApr}} Materias</td>
+            <td> {{arrayEstudiante[1].materiaRep}} Materias</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <img src="../assets/img/Profile (3).jpg">
+            <td> {{arrayEstudiante[2].nombre}} </td>
+            <td> {{arrayEstudiante[2].curso}} </td>
+            <td class="Apr"> {{arrayEstudiante[2].materiaApr}} Materias</td>
+            <td> {{arrayEstudiante[2].materiaRep}} Materias</td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <img src="../assets/img/Profile (4).jpg">
+            <td [ngStyle]="{'background-color': arrayEstudiante[3]%2==0?'red':'#9EDFD3'}">{{arrayEstudiante[3].nombre}}</td>
+            <td [ngStyle]="{'background-color': arrayEstudiante[3]%2==0?'red':'#9EDFD3'}">{{arrayEstudiante[3].curso}}</td>
+            <td [ngStyle]="{'background-color': arrayEstudiante[3]%2==0?'red':'#9EDFD3'}">{{arrayEstudiante[3].materiaApr}}Materias</td>
+            <td [ngStyle]="{'background-color': arrayEstudiante[3]%2==0?'red':'#9EDFD3'}">{{arrayEstudiante[3].materiaRep}}Materias</td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <img src="../assets/img/Profile (5).jpg">
+            <td> {{arrayEstudiante[4].nombre}} </td>
+            <td> {{arrayEstudiante[4].curso}} </td>
+            <td class="Apr"> {{arrayEstudiante[4].materiaApr}} Materias</td>
+            <td> {{arrayEstudiante[4].materiaRep}} Materias</td>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <img src="../assets/img/Profile (6).jpg">
+            <td [ngStyle]="{'background-color': arrayEstudiante[5]%2==0?'red':'#9EDFD3'}">{{arrayEstudiante[5].nombre}}</td>
+            <td [ngStyle]="{'background-color': arrayEstudiante[5]%2==0?'red':'#9EDFD3'}">{{arrayEstudiante[5].curso}}</td>
+            <td [ngStyle]="{'background-color': arrayEstudiante[5]%2==0?'red':'#9EDFD3'}">{{arrayEstudiante[5].materiaApr}}Materias</td>
+            <td [ngStyle]="{'background-color': arrayEstudiante[5]%2==0?'red':'#9EDFD3'}">{{arrayEstudiante[5].materiaRep}}Materias</td>
+        </tr>
+    </tbody>
+</table>
