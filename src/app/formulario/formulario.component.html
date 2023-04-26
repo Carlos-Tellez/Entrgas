@@ -1,0 +1,53 @@
+<div class="container">
+
+    <h4 class="mt-5">Formularios</h4>
+    <hr>
+    <form [formGroup]="forma" (ngSubmit)="guardar()">
+        <div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Nombre</label>
+                <div class="col-8">
+                    <input class="form-control" type="text" formControlName="nombre" [class.is-invalid]="nombreNoValido" placeholder="Nombre">
+                    <small *ngIf="nombreNoValido" class="text-danger"> Ingrese el nombre minimo de 4 caracteres </small>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Apellido</label>
+                <div class="col-8">
+                    <input class="form-control" type="text" formControlName="apellido" [class.is-invalid]="apellidoNoValido" placeholder="Apellido">
+                    <small *ngIf="apellidoNoValido" class="text-danger"> El apellido es un campo obligatorio </small>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Correo</label>
+            <div class="col-md-8">
+            <input class="form-control" type="email" formControlName="correo" [class.is-invalid]="correoNoValido" placeholder="Correo electrónico">
+            <small *ngIf="correoNoValido" class="text-danger"> Ingrese un email valido </small>
+            </div>
+        </div>
+    
+    <div class="form-group row">
+        <label class="col-2 col-form-label">&nbsp;</label>
+        <div class="input-group col-md-8">
+            <button type="submit" class="btn btn-outline-primary mr-2">
+                Guardar
+            </button>
+            <button type="button" class="btn btn-outline-danger" (click)="limpiar()">
+                Limpiar
+            </button>
+        </div>
+    </div>
+
+    </form>
+
+    <hr>
+    <h3 class="mt-5">Bienvenido</h3>
+    <pre> 
+        Profesor : {{forma.value.nombre}} {{forma.value.apellido}}
+        <br>
+        Su correo Institucional es  : {{forma.value.correo}}
+    </pre>
+</div>
